@@ -160,11 +160,6 @@ int GetTimeInitial()
 	}
 
 	ret = atoi(ms);
-	if (strlen(ms) == 0 || ret == 0){
-		fclose(fp);
-		WriteDefaultTime();
-		return atoi(DEFAULT_MINS)*60*1000;
-	}
 
 	fclose(fp);
 	return ret*60*1000;
@@ -238,7 +233,7 @@ int main(int argc, char** argv)
 		}
 		if (ms <= 0){
 			ms = 0;
-			ret = KillProcess(ret);
+			KillProcess(ret);
 		}
 	}
 
