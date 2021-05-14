@@ -1,3 +1,5 @@
+/* Kill any game processes launched by Steam after a set daily play limit is reached */
+
 #include <stdio.h>
 #include <time.h>
 #include <utime.h>
